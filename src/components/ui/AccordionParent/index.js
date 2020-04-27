@@ -6,8 +6,8 @@ const AccordionContainer = styled.div`
 `;
 
 const AccordionHeader = styled.div`
-  background-color: #0815FF;
-  color: white;
+  background-color: #f7bf31;
+  color: black;
   margin: 4px;
   padding: 18px;
   width: 100%;
@@ -35,29 +35,29 @@ const AccordionButton = styled.button`
   background: white;
 `;
 
-const AccordionParent = ({ title, buttonTitle, onButtonClick, children }) => {
+const AccordionParent = ({ id, title, isBill, onButtonClick, children }) => {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
     <AccordionContainer>
       <AccordionHeader
+        key={id}
         onClick={() => {
           setIsHidden(!isHidden);
         }}
       >
         <AccordionTitle>
           <span>{title}</span>
-          {buttonTitle && (
-            <AccordionButton
-              type="button"
-              onClick={(event) => {
-                event.stopPropagation();
-                onButtonClick(title);
-              }}
-            >
-              {buttonTitle}
-            </AccordionButton>
-          )}
+
+          <AccordionButton
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              onButtonClick(id, isBill);
+            }}
+          >
+            {isBill === true ? "Remove bill" : "Add as bill"}
+          </AccordionButton>
         </AccordionTitle>
         <div>
           <div>number of items: {children.length}</div>
