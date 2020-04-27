@@ -16,7 +16,16 @@
 1. After each action, the lists should reflect the changes.
 
 ### Option
-
+Option 2 with 4 hours
+## Notes if I had more time
+update isBill with patch to persist on refresh
+created more unit tests for components and logic
+styled accordionChild
+used a loader component for a better experience
+update the user with error messages
+add filters  
+add sorting 
+add average transaction amount, min transaction amount, max transaction amount to accordion
 
 ### File Structure
     src
@@ -60,7 +69,5 @@
 * State Management: redux + react-redux + redux-saga
 * Styling: styled-components
 * Tests: jest + enzyme
-
-### Notes
 
 ### Issues
