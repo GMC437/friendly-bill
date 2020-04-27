@@ -25,7 +25,7 @@
             page
                 HomePage
                 BillsPage
-                ExpensePage
+                ExpensesPage
             router
                 RouterBody
                 RouterNav
