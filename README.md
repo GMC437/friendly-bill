@@ -34,6 +34,7 @@
                 AccordionParent
                 AccordionChild
                 IsBillButton
+                BillBar
         helpers
         reducers
         sagas
