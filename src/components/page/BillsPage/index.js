@@ -1,7 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import BasePage from "../BasePage";
 
 const BillsPage = () => {
-  return <div>Bills Page</div>;
+  const { data } = useSelector((state) => state);
+  const { bills, loading } = data;
+  const billsFiltered = bills.filter((i) => i.isBill === true);
+
+  return <BasePage bills={billsFiltered} isLoading={loading.isLoading} />;
 };
 
 export default BillsPage;
