@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import appReducer from "./reducers";
 import rootSaga from "./sagas";
+import RouterNav from "./components/router/RouterNav";
 import welcomeIcon from "./assets/welcome.jpg";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -24,7 +25,10 @@ const App = () => {
     <Router>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <img src={welcomeIcon} alt="Welcome!" />
+          <>
+            <RouterNav />
+            <img src={welcomeIcon} alt="Welcome!" />
+          </>
         </ThemeProvider>
       </Provider>
     </Router>
