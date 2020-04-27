@@ -5,3 +5,8 @@ export const fetchJson = (url) => {
     })
   );
 };
+
+export const formatDate = (date) => {
+  const initial = date.split("-");
+  return [initial[2], initial[1], initial[0]].join("/");
+};

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { updateBillStatus } from "../../../actions";
+import { formatDate } from "../../../helpers";
 import AccordionParent from "../../ui/AccordionParent";
 import AccordionChild from "../../ui/AccordionChild";
 
@@ -25,7 +26,7 @@ const BasePage = ({bills, isLoading}) => {
     const billsAccordions = bills.map((i) => (
       <AccordionParent id={i.id} title={i.name} onButtonClick={onClickBill} isBill={i.isBill}>
         {i.transactions.map((t) => (
-          <AccordionChild />
+          <AccordionChild  id={t.id} amount={t.amount} date={formatDate(t.date)} />
         ))}
       </AccordionParent>
     ));
