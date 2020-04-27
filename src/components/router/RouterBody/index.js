@@ -11,7 +11,7 @@ const RouterBody = () => {
       <Route path="/bills" component={BillsPage} />
       <Route path="/expenses" component={ExpensesPage} />
     </>
-  );;
+  );
 };
 
 export default RouterBody;

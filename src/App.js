@@ -23,7 +23,7 @@ const theme = {
 const AppHeader = styled.div`
   display: flex;
   color: white;
-  background-color: #01579b;
+  background-color: #0815FF;
   justify-content: space-between;
   padding: 10px;
 `;
